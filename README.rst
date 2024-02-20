@@ -5,9 +5,9 @@ Frequency response function as used in structural dynamics.
 -----------------------------------------------------------
 
 The ``sdypy-FRF`` is a namespace project of the ``sdypy`` framework and is a direct link
-to the ``pyFRF`` package.
+to the ``pyFRF`` package (developed at `pyFRF <https://github.com/ladisk/pyFRF>`_).
 
-Use the ``sdypy`` package to convieniently access the functionallity of the
+Use the ``sdypy`` package to conveniently access the functionality of the
 `pyFRF <https://github.com/ladisk/pyFRF>`_ package through its namespace (see example below). 
 
 Other functionalities of the ``sdypy`` framework include:
@@ -59,7 +59,7 @@ data can be added later via ``add_data()`` method:
 
 Computing FRF:
 ~~~~~~~~~~~~~~
-Preferable way to get the frequency response functions is via ``get_FRF()`` method:
+The preferable way to get the frequency response functions is via ``get_FRF()`` method:
 
 .. code:: python
 
