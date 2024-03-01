@@ -14,6 +14,7 @@ Other functionalities of the ``sdypy`` framework include:
 
 - `sdypy-EMA <https://github.com/sdypy/sdypy-EMA>`_: Experimental Modal Analysis
 - `sdypy-io <https://github.com/sdypy/sdypy-io>`_: Input/Output operations (LVM files, UFF files)
+- `sdypy-excitation <https://github.com/sdypy/sdypy-excitation>`_: Excitation signals as used in structural dynamics and vibration fatigue
 
 
 For more information check out the showcase examples and see documentation_.
