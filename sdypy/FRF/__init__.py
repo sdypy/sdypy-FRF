@@ -9,4 +9,6 @@ try:
 except PackageNotFoundError:  # source checkout without installed metadata
     __version__ = "0+unknown"
 
-from pyFRF import *
+from pyFRF import FRF, assert_sep005, direction_dict
+
+__all__ = ["FRF", "assert_sep005", "direction_dict"]
