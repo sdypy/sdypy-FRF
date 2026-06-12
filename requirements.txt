@@ -1,2 +1,0 @@
-# Package requirements for users
-pyFRF >= 1.0
