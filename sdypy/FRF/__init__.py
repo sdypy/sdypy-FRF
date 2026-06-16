@@ -1,6 +1,4 @@
-"""
-A project template for the SDyPy effort..
-"""
+"""sdypy.FRF - frequency response function estimation, re-exported from pyFRF under the sdypy namespace."""
 
 from importlib.metadata import version, PackageNotFoundError
 
