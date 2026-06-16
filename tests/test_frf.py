@@ -27,7 +27,6 @@ Test coverage
 import numpy as np
 import pytest
 
-import sdypy.FRF as FRF_module
 from sdypy.FRF import FRF, assert_sep005
 
 
