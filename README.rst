@@ -79,10 +79,6 @@ We can also directly get the requested FRF via other methods: ``get_H1()``, ``ge
 
 |pytest|
 
-|binder| to test the *Showcase.ipynb*.
-
-.. |binder| image:: https://mybinder.org/badge_logo.svg
-   :target: https://mybinder.org/v2/gh/ladisk/pyFRF/main
-.. |pytest| image:: https://github.com/ladisk/pyFRF/actions/workflows/python-package.yml/badge.svg
-    :target: https://github.com/ladisk/pyFRF/actions
+.. |pytest| image:: https://github.com/sdypy/sdypy-FRF/actions/workflows/python-package.yml/badge.svg
+    :target: https://github.com/sdypy/sdypy-FRF/actions
 
