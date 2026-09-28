@@ -73,13 +73,13 @@ def test_h1_peak_frequency():
         resp=resp,
         exc_type='f',
         resp_type='a',
-        frf_type='H1',
+        frf_estimator='H1',
     )
 
-    # get_FRF(form='accelerance') returns the H1 accelerance estimator.
+    # get_FRF(frf_form='accelerance') returns the H1 accelerance estimator.
     # DC bin (index 0) is NaN due to the 1/w^2 -> w^2 round-trip at w=0;
     # skip it when locating the magnitude peak.
-    h1_acc = frf_obj.get_FRF(type='H1', form='accelerance')
+    h1_acc = frf_obj.get_FRF(frf_estimator='H1', frf_form='accelerance')
     f_axis = frf_obj.get_f_axis()   # Hz
 
     # squeeze to 1-D magnitude, exclude DC

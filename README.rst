@@ -45,7 +45,7 @@ Make an instance of ``FRF`` class:
         nperseg=None,
         noverlap=None,
         archive_time_data=False,
-        frf_type='H1',
+        frf_estimator='H1',
         copy=True
     )
 
@@ -64,7 +64,7 @@ The preferable way to get the frequency response functions is via ``get_FRF()`` 
 
 .. code:: python
 
-    frf = a.get_FRF(type="default", form="receptance")
+    frf = a.get_FRF(frf_estimator="default", frf_form="receptance")
 
 We can also directly get the requested FRF via other methods: ``get_H1()``, ``get_H2()``, ``get_Hv()`` and, ``get_ods_frf()``:
 
