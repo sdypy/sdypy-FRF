@@ -16,12 +16,13 @@ Test coverage
    consecutive frequency bins equals fs/fft_len.
 
 3. test_assert_sep005_valid_accepted
-   A fully compliant SEP-005 dict (data=np.ndarray, name, unit_str, fs)
-   is passed to sdypy.FRF.assert_sep005; assert no exception is raised.
+   A list with one fully compliant SEP-005 channel (data=np.ndarray, name,
+   unit_str, fs) is passed to sdypy.FRF.assert_sep005; assert no exception
+   is raised.
 
 4. test_assert_sep005_invalid_raises
-   A dict missing the compulsory 'name' key is rejected.  assert_sep005
-   raises ValueError (the real behaviour — it never returns False).
+   A channel missing the compulsory 'name' key is rejected. assert_sep005
+   raises a pydantic ValidationError, which is a ValueError.
 """
 
 import numpy as np
@@ -73,13 +74,13 @@ def test_h1_peak_frequency():
         resp=resp,
         exc_type='f',
         resp_type='a',
-        frf_type='H1',
+        frf_estimator='H1',
     )
 
-    # get_FRF(form='accelerance') returns the H1 accelerance estimator.
+    # get_FRF(frf_form='accelerance') returns the H1 accelerance estimator.
     # DC bin (index 0) is NaN due to the 1/w^2 -> w^2 round-trip at w=0;
     # skip it when locating the magnitude peak.
-    h1_acc = frf_obj.get_FRF(type='H1', form='accelerance')
+    h1_acc = frf_obj.get_FRF(frf_estimator='H1', frf_form='accelerance')
     f_axis = frf_obj.get_f_axis()   # Hz
 
     # squeeze to 1-D magnitude, exclude DC
@@ -155,7 +156,7 @@ def test_assert_sep005_valid_accepted():
         'fs': 1000,
     }
     # must not raise any exception
-    assert_sep005(valid)
+    assert_sep005([valid])
 
 
 # ---------------------------------------------------------------------------
@@ -166,9 +167,8 @@ def test_assert_sep005_invalid_raises():
     """
     assert_sep005 raises ValueError when a compulsory key is absent.
 
-    Implementation note: assert_sep005 always raises — it never returns
-    False.  Missing 'name' triggers ValueError("Missing compulsory
-    keyword 'name'").
+    sdypy-sep005 1.0 validates each channel with pydantic. The
+    ValidationError it raises is a ValueError and names the missing field.
     """
     invalid = {
         # 'name' is intentionally omitted
@@ -176,5 +176,5 @@ def test_assert_sep005_invalid_raises():
         'unit_str': 'm/s^2',
         'fs': 1000,
     }
-    with pytest.raises(ValueError, match="Missing compulsory keyword 'name'"):
-        assert_sep005(invalid)
+    with pytest.raises(ValueError, match="name"):
+        assert_sep005([invalid])
