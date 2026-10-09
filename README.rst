@@ -17,7 +17,7 @@ Other functionalities of the ``sdypy`` framework include:
 - `sdypy-excitation <https://github.com/sdypy/sdypy-excitation>`_: Excitation signals as used in structural dynamics and vibration fatigue
 
 
-For more information check out the showcase examples and see documentation_.
+For more information check out the `showcase notebook <https://github.com/sdypy/sdypy-FRF/blob/main/examples/FRF%20Showcase.ipynb>`_ and see documentation_.
 
 Basic ``sdypy-FRF`` usage:
 --------------------------
