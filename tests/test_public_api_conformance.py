@@ -1,13 +1,13 @@
 """
 Public-API conformance tests for sdypy-FRF.
 
-``sdypy.FRF`` is a curated re-export of pyFRF, so the SEP 2 names it exposes
-are decided by pyFRF's signatures.  These tests pin that contract at the
-wrapper, mirroring ``tests/test_public_api_conformance.py`` in sdypy-EMA:
+``sdypy.FRF`` curates the names of ``sdypy.FRF.frf`` (the code that used to
+live in pyFRF); the SEP 2 names it exposes are decided by their signatures.
+These tests pin that contract, mirroring ``tests/test_public_api_conformance.py`` in sdypy-EMA:
 
   (a) every entry in sdypy.FRF.__all__ resolves via getattr
   (b) no leaked third-party or stdlib names in sdypy.FRF.__all__
-  (c) sdypy.FRF.FRF is the pyFRF.FRF class itself, not a copy
+  (c) sdypy.FRF.FRF is the sdypy.FRF.frf.FRF class itself, not a copy
   (d) FRF(frf_estimator=...) and get_FRF(frf_estimator=..., frf_form=...)
       run without DeprecationWarning; positional and keyword calls agree
   (e) FRF(frf_type=...) emits DeprecationWarning and behaves as frf_estimator
@@ -19,9 +19,9 @@ import warnings
 
 import numpy as np
 import pytest
-import pyFRF
 
 import sdypy.FRF as FRF
+from sdypy.FRF import frf
 
 FS = 1000
 N_SAMPLES = 2000
@@ -60,8 +60,8 @@ def test_leaked_names_not_in_all():
         assert name not in FRF.__all__, f"{name!r} must not appear in sdypy.FRF.__all__"
 
 
-def test_frf_class_is_pyfrf_class():
-    assert FRF.FRF is pyFRF.FRF
+def test_frf_class_is_frf_module_class():
+    assert FRF.FRF is frf.FRF
 
 
 # ---------------------------------------------------------------------------
