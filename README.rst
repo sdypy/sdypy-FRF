@@ -4,11 +4,11 @@ sdypy-FRF
 Frequency response function as used in structural dynamics.
 -----------------------------------------------------------
 
-The ``sdypy-FRF`` is a namespace project of the ``sdypy`` framework and is a direct link
-to the ``pyFRF`` package (developed at `pyFRF <https://github.com/ladisk/pyFRF>`_).
+The ``sdypy-FRF`` is a namespace project of the ``sdypy`` framework and holds the
+frequency response function code that was developed as the
+`pyFRF <https://github.com/ladisk/pyFRF>`_ package.
 
-Use the ``sdypy`` package to conveniently access the functionality of the
-`pyFRF <https://github.com/ladisk/pyFRF>`_ package through its namespace (see example below). 
+Use the ``sdypy`` package to access the functionality through its namespace (see example below).
 
 Other functionalities of the ``sdypy`` framework include:
 
@@ -17,7 +17,7 @@ Other functionalities of the ``sdypy`` framework include:
 - `sdypy-excitation <https://github.com/sdypy/sdypy-excitation>`_: Excitation signals as used in structural dynamics and vibration fatigue
 
 
-For more information check out the `showcase notebook <https://github.com/sdypy/sdypy-FRF/blob/main/examples/FRF%20Showcase.ipynb>`_ and see documentation_.
+For more information check out the `showcase notebook <https://github.com/sdypy/sdypy-FRF/blob/main/examples/Showcase.ipynb>`_ and see documentation_.
 
 Basic ``sdypy-FRF`` usage:
 --------------------------
