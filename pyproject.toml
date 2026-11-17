@@ -7,7 +7,8 @@ name = "sdypy-FRF"
 version = "0.4.0"
 authors = [{name = "Janko Slavič et al.", email = "janko.slavic@fs.uni-lj.si"}]
 maintainers = [{name = "Janko Slavič et al.", email = "janko.slavic@fs.uni-lj.si"}]
-license = {text = "MIT"}
+license = "MIT"
+license-files = ["License"]
 description = "Frequency response function as used in structural dynamics."
 readme = "README.rst"
 keywords = ["Frequency response function", "MIMO", "SIMO/MISO", "SISO", "structural dynamics"]
@@ -21,7 +22,6 @@ classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "Topic :: Scientific/Engineering",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
     "Programming Language :: Python :: 3.15",
