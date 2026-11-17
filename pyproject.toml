@@ -12,7 +12,11 @@ description = "Frequency response function as used in structural dynamics."
 readme = "README.rst"
 keywords = ["Frequency response function", "MIMO", "SIMO/MISO", "SISO", "structural dynamics"]
 requires-python = ">=3.13"
-dependencies = ["pyFRF >= 1.5"]
+dependencies = [
+    "numpy>=1.11.0",
+    "scipy>=1.2.0",
+    "sdypy-sep005",
+]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -34,11 +38,23 @@ docs = [
     "pydata-sphinx-theme",
     "sphinx-copybutton>=0.5.2",
 ]
+test = [
+    "pytest",
+    "matplotlib",
+    "pyExSi",
+    "pyLump",
+]
+examples = [
+    "matplotlib",
+    "pyExSi",
+    "lvm_read",
+    "jupyter",
+]
 dev = [
     "sdypy-FRF[docs]",
+    "sdypy-FRF[test,examples]",
     "twine",
     "wheel",
-    "pytest",
     "build",
     "flake8",
 ]

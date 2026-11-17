@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Functional tests for sdypy.FRF (backed by pyFRF).
+Functional tests for sdypy.FRF (implemented in sdypy.FRF.frf).
 
 Test coverage
 -------------
