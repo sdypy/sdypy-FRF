@@ -48,6 +48,8 @@ extensions = [
     'sphinx.ext.napoleon',
     # 'rinoh.frontend.sphinx',
     'sphinx_copybutton',
+    'nbsphinx',
+    'nbsphinx_link',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -189,6 +191,9 @@ epub_exclude_files = ['search.html']
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {}
 # intersphinx disabled to avoid network issues; can be re-enabled if needed
+
+# Do not run the Showcase notebook during the docs build
+nbsphinx_execute = 'never'
 
 # Autodoc options (to show __init__ function in docs)
 autodoc_default_options = {
