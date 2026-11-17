@@ -1,7 +1,8 @@
 Welcome to ``SDyPy-FRF`` documentation!
-======================================
+=======================================
 
 This is the documentation for the ``SDyPy-FRF`` package, part of ``SDyPy`` framework_. Check out the project on GitHub_.
+The package contains the code of the former ``pyFRF`` package.
 
 To use the package, install the ``sdypy`` package:
 
@@ -15,12 +16,15 @@ The ``FRF`` module is imported as follows:
 
    from sdypy import FRF
 
+Check out the :doc:`tutorial <tutorial>` section for further information.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   pyFRF <https://pyfrf.readthedocs.io/en/latest/index.html>
+   tutorial
+   Showcase.nblink
+   code_documentation
 
 
 .. _GitHub: https://github.com/sdypy/sdypy-FRF

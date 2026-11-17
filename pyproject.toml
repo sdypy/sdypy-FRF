@@ -37,6 +37,9 @@ docs = [
     "sphinx",
     "pydata-sphinx-theme",
     "sphinx-copybutton>=0.5.2",
+    "nbsphinx",
+    "nbsphinx-link",
+    "ipython",
 ]
 test = [
     "pytest",
